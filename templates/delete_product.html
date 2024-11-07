@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Product{% endblock %}
+
+{% block content %}
+  {% if del_product %}
+    <h2>Product deleted Successfully!</h2>
+    <p>{{ product_name }} has been removed from the database.</p>
+  {% else %}
+    <h2>Insufficient information to delete a product.</h2>
+    <p>To delete a product, please indicate the product name in the URL.</p>
+  {% endif %}
+{% endblock %}

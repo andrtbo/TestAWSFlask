@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Product{% endblock %}
+
+{% block content %}
+  {% if new_product%}
+    <h2>Product Added Successfully!</h2>
+    <p>You've added a product with the following values.</p>
+    <li>Name: {{ product_name }}</li>
+    <li>Price: {{ price }}</li>
+  {% else %}
+    <h2>Insufficient information to add a product.</h2>
+    <p>To add a product, please add a product name and price separated by forward slashes to the URL.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Product{% endblock %}
+
+{% block content %}
+  {% if upd_product %}
+    <h2>Product updated Successfully!</h2>
+    <p>Product {{ id }}'s price has been updated to {{ price }}.</p>
+  {% else %}
+    <h2>Insufficient information to update a product.</h2>
+    <p>To update a product, please indicate the product id and new price separated by forward slashes in the URL.</p>
+  {% endif %}
+{% endblock %}
